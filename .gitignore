@@ -1,0 +1,6 @@
+HW 1 Simhash.pdf
+venv/
+*.zip
+*.docx
+*.pdf
+.DS_Store
