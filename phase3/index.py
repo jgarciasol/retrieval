@@ -32,9 +32,6 @@ def parse(input_dir, output_dir, stop_words_set):
 
             stripped = re.findall(r'\b[a-zA-Z]+\b', text.lower())
 
-            #The two lines below are how I stripped tokens in the Phase 1 of the project
-            #stripped = re.sub(r'[^\sa-zA-Z ]', '\n', text)
-            #tokens = [token.lower() for token in stripped.split() if len(token) > 1 and token.lower() not in stop_words_list]
             tokens = [token for token in stripped if token not in stop_words_set and len(token) > 1]
             for token in tokens:
                 if token not in token_freq:
@@ -79,6 +76,7 @@ if __name__ == "__main__":
     #reads in stop words
     with open('stopwords.txt', 'r') as f:
         stop_words_set = {line.strip() for line in f}
-    #print(type(stop_words_set))
-    #print(len(stop_words_set))
-    parse(input_dir, output_dir, stop_words_set)
+
+    #returning term frequency and doc frequency
+    tf, df = parse(input_dir, output_dir, stop_words_set)
+    print(f'Term frequency {tf} \t doc freq {df}')
