@@ -16,14 +16,14 @@ def get_filenames(input_dir):
     return filenames
 
 
-def parse(input_dir, output_dir, stop_words_set):
+def parse(input_dir, stop_words_set):
     files = get_filenames(input_dir)
     files_length = len(files)
     #used to store token frequency and avoids checks for existence of a key in a dict
     #outer dictionary are tokens, values of the tokens are in the inner
     token_freq = {}
     document_freq = defaultdict(int)
-    start = time.time()
+   # start = time.time()
     for i, file in enumerate(files):
         #Deals with UnicodeDecodeError
         with open(file, 'r', encoding='utf-8', errors='ignore') as fp:
@@ -62,13 +62,27 @@ def parse(input_dir, output_dir, stop_words_set):
     # plt.ylabel('Time taken(ms)')
     # plt.show()
 
-def inverted_index(token_freq, doc_freq):
-    pass
+def inverted_index(token_freq, doc_freq, output_dir):
+    dict_file = os.path.join(output_dir, "dictionary.txt")
+    post_file = os.path.join(output_dir, "postings.txt")
+
+    postings = []
+    with open(dict_file, 'w') as d_file, open(post_file, 'w') as p_file:
+        posting_pos = 1
+        for token, docs in token_freq.items():
+            d_file.write(f'{token}\n{len(docs)}\n{posting_pos}\n')
+
+            for file, weight in docs.items():
+                postings.append((file, weight))
+                posting_pos += 1
+        
+        for post in postings:
+            p_file.write(f'{post[0]}, {post[1]}\n')
 
 if __name__ == "__main__":
 
     if len(sys.argv) < 2:
-        print("Use python3 tokenizer_p1.py input-dir output-dir")
+        print("Use python3 index.py input-dir output-dir")
 
     input_dir = sys.argv[1]
     output_dir = sys.argv[2]
@@ -78,5 +92,5 @@ if __name__ == "__main__":
         stop_words_set = {line.strip() for line in f}
 
     #returning term frequency and doc frequency
-    tf, df = parse(input_dir, output_dir, stop_words_set)
-    print(f'Term frequency {tf} \t doc freq {df}')
+    tf, df = parse(input_dir, stop_words_set)
+    inverted_index(tf, df, output_dir)
