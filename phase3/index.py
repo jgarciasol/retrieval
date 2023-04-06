@@ -62,17 +62,22 @@ def parse(input_dir, stop_words_set):
     # plt.ylabel('Time taken(ms)')
     # plt.show()
 
+
 def inverted_index(token_freq, doc_freq, output_dir):
     dict_file = os.path.join(output_dir, "dictionary.txt")
     post_file = os.path.join(output_dir, "postings.txt")
 
+    #stores doc id and term weight for tokens
     postings = []
+    #stores dictionary and postings data
     with open(dict_file, 'w') as d_file, open(post_file, 'w') as p_file:
         posting_pos = 1
         for token, docs in token_freq.items():
-            d_file.write(f'{token}\n{len(docs)}\n{posting_pos}\n')
+            #writes token, num of docs containing token, and pos
+            d_file.write(f'{token}\n{len(docs)}\n{posting_pos}\n\n')
 
             for file, weight in docs.items():
+                #tuple containing doc id and token weight for that token in the document
                 postings.append((file, weight))
                 posting_pos += 1
         
