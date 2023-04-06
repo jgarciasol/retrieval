@@ -49,7 +49,7 @@ def parse(input_dir, output_dir, stop_words_set):
             for token in set(tokens):
                 document_freq[token]+=1
 
-            #METHOD 1 of removing tokens that appear once in corpus
+            #removing tokens that appear once in corpus
             appear_once = [token for token in token_freq if document_freq[token] == 1]
             for token in appear_once:
                 del token_freq[token]
