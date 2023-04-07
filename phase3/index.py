@@ -95,23 +95,18 @@ def inverted_index(token_freq, doc_freq, output_dir):
 
 def measure_time(input_dir, output_dir, stop_words_set, num_docs_list):
     files = get_filenames(input_dir)
-    times_list = []
-    cpu_times = []
+    times_list = [] #for total elapsed time
     for num_docs in num_docs_list:
         input_dir_subset = files[:num_docs]
-        start_cpu = time.process_time()
         start = time.time()
         #returning term frequency and doc frequency
         tf, df = parse(input_dir_subset, stop_words_set)
         inverted_index(tf, df, output_dir)
-        end_cpu = time.process_time()
         end = time.time()
-        cpu_total = end_cpu - start_cpu
         total_time = end - start
         times_list.append(total_time)
-        cpu_times.append(cpu_total)
         print(f'Processed {num_docs} files. Time Taken: {total_time} seconds')
-    return times_list, cpu_times
+    return times_list
 
 def plot_time(num_docs_list, time_list,cpu_time_list):
     plt.plot(num_docs_list, time_list, label = 'Total Time')
