@@ -68,24 +68,36 @@ def inverted_index(token_freq, doc_freq, output_dir):
     post_file = os.path.join(output_dir, "postings.txt")
 
     #for calc docs length
-    doc_lenghts = {}
+    doc_lengths = {}
+    #docs is another dict that contains token freq of current token in each document
     for token, docs in token_freq.items():
+        #weight is token frequency of current token in current document
         for file, weight in docs.items():
-            if file not in doc_lenghts:
-                doc_lenghts[file] = 0
-            doc_lenghts[file] += weight ** 2
+            if file not in doc_lengths:
+                doc_lengths[file] = 0
+            doc_lengths[file] += weight ** 2
+    #normalizing docs length
+    for file in doc_lengths:
+        doc_lengths[file] = math.sqrt(doc_lengths[file])
+    num_docs = len(doc_lengths)
     #stores doc id and term weight for tokens
     postings = []
     #stores dictionary and postings data
     with open(dict_file, 'w') as d_file, open(post_file, 'w') as p_file:
         posting_pos = 1
         for token, docs in token_freq.items():
+            idf = math.log(num_docs / len(docs))
             #writes token, num of docs containing token, and pos
             d_file.write(f'{token}\n{len(docs)}\n{posting_pos}\n\n')
 
             for file, weight in docs.items():
+                tf = weight
+                tf_idf = tf*idf
+                norm_weight = tf_idf / doc_lengths[file]
+                #extract just name of filename from the path 
+                doc_id = os.path.basename(file)
                 #tuple containing doc id and token weight for that token in the document
-                postings.append((file, weight))
+                postings.append((doc_id, norm_weight))
                 posting_pos += 1
         
         for post in postings:
