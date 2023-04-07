@@ -67,6 +67,13 @@ def inverted_index(token_freq, doc_freq, output_dir):
     dict_file = os.path.join(output_dir, "dictionary.txt")
     post_file = os.path.join(output_dir, "postings.txt")
 
+    #for calc docs length
+    doc_lenghts = {}
+    for token, docs in token_freq.items():
+        for file, weight in docs.items():
+            if file not in doc_lenghts:
+                doc_lenghts[file] = 0
+            doc_lenghts[file] += weight ** 2
     #stores doc id and term weight for tokens
     postings = []
     #stores dictionary and postings data
