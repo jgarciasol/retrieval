@@ -17,14 +17,13 @@ def get_filenames(input_dir):
 
 
 def parse(input_dir, stop_words_set):
-    files = get_filenames(input_dir)
-    files_length = len(files)
+
+    files = input_dir
     #used to store token frequency and avoids checks for existence of a key in a dict
     #outer dictionary are tokens, values of the tokens are in the inner
     token_freq = {}
     document_freq = defaultdict(int)
-   # start = time.time()
-    for i, file in enumerate(files):
+    for file in files:
         #Deals with UnicodeDecodeError
         with open(file, 'r', encoding='utf-8', errors='ignore') as fp:
             soup = BeautifulSoup(fp, 'html.parser')
@@ -51,16 +50,6 @@ def parse(input_dir, stop_words_set):
             for token in appear_once:
                 del token_freq[token]
     return token_freq, document_freq
-        # if i % 100 == 0:
-        #     print(f'Number of files processed: {i + 1} ')
-
-    # end = time.time()
-    # time_taken = (end - start) * 1000 #convert to milliseconds
-    # print(f'Time taken is ~ {time_taken} milliseconds')
-    # plt.plot([0, i], [0, time_taken])
-    # plt.xlabel('Number of Files')
-    # plt.ylabel('Time taken(ms)')
-    # plt.show()
 
 
 def inverted_index(token_freq, doc_freq, output_dir):
@@ -76,6 +65,7 @@ def inverted_index(token_freq, doc_freq, output_dir):
             if file not in doc_lengths:
                 doc_lengths[file] = 0
             doc_lengths[file] += weight ** 2
+
     #normalizing docs length
     for file in doc_lengths:
         doc_lengths[file] = math.sqrt(doc_lengths[file])
@@ -103,6 +93,34 @@ def inverted_index(token_freq, doc_freq, output_dir):
         for post in postings:
             p_file.write(f'{post[0]}, {post[1]}\n')
 
+def measure_time(input_dir, output_dir, stop_words_set, num_docs_list):
+    files = get_filenames(input_dir)
+    times_list = []
+    cpu_times = []
+    for num_docs in num_docs_list:
+        input_dir_subset = files[:num_docs]
+        start_cpu = time.process_time()
+        start = time.time()
+        #returning term frequency and doc frequency
+        tf, df = parse(input_dir_subset, stop_words_set)
+        inverted_index(tf, df, output_dir)
+        end_cpu = time.process_time()
+        end = time.time()
+        cpu_total = end_cpu - start_cpu
+        total_time = end - start
+        times_list.append(total_time)
+        cpu_times.append(cpu_total)
+        print(f'Processed {num_docs} files. Time Taken: {total_time} seconds')
+    return times_list, cpu_times
+
+def plot_time(num_docs_list, time_list,cpu_time_list):
+    plt.plot(num_docs_list, time_list, label = 'Total Time')
+    plt.plot(num_docs_list, cpu_time_list, label= 'CPU Time')
+    plt.xlabel('Num of Documents')
+    plt.ylabel('Time (s)')
+    plt.legend()
+    plt.show()
+
 if __name__ == "__main__":
 
     if len(sys.argv) < 2:
@@ -115,6 +133,6 @@ if __name__ == "__main__":
     with open('stopwords.txt', 'r') as f:
         stop_words_set = {line.strip() for line in f}
 
-    #returning term frequency and doc frequency
-    tf, df = parse(input_dir, stop_words_set)
-    inverted_index(tf, df, output_dir)
+    num_docs_list = [10, 20, 40, 80, 160, 220, 300, 380, 460, 503]
+    elapsed_time, cpu_time = measure_time(input_dir, output_dir, stop_words_set, num_docs_list)
+    plot_time(num_docs_list, elapsed_time, cpu_time)
