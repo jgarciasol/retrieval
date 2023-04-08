@@ -72,7 +72,7 @@ def inverted_index(token_freq, doc_freq, output_dir):
     num_docs = len(doc_lengths)
     #stores doc id and term weight for tokens
     postings = []
-    #stores dictionary and postings data
+    #stores dictionary and postings results
     with open(dict_file, 'w') as d_file, open(post_file, 'w') as p_file:
         posting_pos = 1
         for token, docs in token_freq.items():
@@ -131,7 +131,6 @@ if __name__ == "__main__":
     #reads in stop words
     with open('stopwords.txt', 'r') as f:
         stop_words_set = {line.strip() for line in f}
-
     num_docs_list = [10, 20, 40, 80, 160, 220, 300, 380, 460, 503]
     elapsed_time = measure_time(input_dir, output_dir, stop_words_set, num_docs_list)
     plot_time(num_docs_list, elapsed_time)

@@ -1,0 +1,200 @@
+token: international
+number of docs: 113
+posting position: 1
+token: day
+number of docs: 109
+posting position: 114
+token: experts
+number of docs: 18
+posting position: 223
+token: tour
+number of docs: 12
+posting position: 241
+token: february
+number of docs: 21
+posting position: 253
+token: major
+number of docs: 106
+posting position: 274
+token: market
+number of docs: 62
+posting position: 380
+token: fallen
+number of docs: 10
+posting position: 442
+token: level
+number of docs: 92
+posting position: 452
+token: industry
+number of docs: 83
+posting position: 544
+token: government
+number of docs: 132
+posting position: 627
+token: equipment
+number of docs: 33
+posting position: 759
+token: professional
+number of docs: 51
+posting position: 792
+token: provides
+number of docs: 73
+posting position: 843
+token: information
+number of docs: 184
+posting position: 916
+token: senior
+number of docs: 27
+posting position: 1100
+token: representatives
+number of docs: 30
+posting position: 1127
+token: foreign
+number of docs: 92
+posting position: 1157
+token: support
+number of docs: 104
+posting position: 1249
+token: russia
+number of docs: 57
+posting position: 1353
+token: ukraine
+number of docs: 21
+posting position: 1410
+token: japan
+number of docs: 36
+posting position: 1431
+token: representing
+number of docs: 27
+posting position: 1467
+token: material
+number of docs: 58
+posting position: 1494
+token: edition
+number of docs: 9
+posting position: 1552
+token: published
+number of docs: 37
+posting position: 1561
+token: american
+number of docs: 143
+posting position: 1598
+token: institute
+number of docs: 50
+posting position: 1741
+token: introduction
+number of docs: 52
+posting position: 1791
+token: world
+number of docs: 142
+posting position: 1843
+token: current
+number of docs: 105
+posting position: 1985
+token: agreement
+number of docs: 52
+posting position: 2090
+token: force
+number of docs: 46
+posting position: 2142
+token: cis
+number of docs: 10
+posting position: 2188
+token: integration
+number of docs: 26
+posting position: 2198
+token: history
+number of docs: 137
+posting position: 2224
+token: plans
+number of docs: 69
+posting position: 2361
+token: round
+number of docs: 19
+posting position: 2430
+token: special
+number of docs: 78
+posting position: 2449
+token: james
+number of docs: 33
+posting position: 2527
+token: ralph
+number of docs: 6
+posting position: 2560
+token: director
+number of docs: 41
+posting position: 2566
+token: european
+number of docs: 59
+posting position: 2607
+token: mexico
+number of docs: 60
+posting position: 2666
+token: joint
+number of docs: 38
+posting position: 2726
+token: research
+number of docs: 132
+posting position: 2764
+token: program
+number of docs: 127
+posting position: 2896
+token: earlier
+number of docs: 40
+posting position: 3023
+token: development
+number of docs: 127
+posting position: 3063
+token: developed
+number of docs: 57
+posting position: 3190
+token: congress
+number of docs: 45
+posting position: 3247
+token: chairman
+number of docs: 34
+posting position: 3292
+token: executive
+number of docs: 38
+posting position: 3326
+token: articles
+number of docs: 37
+posting position: 3364
+token: reach
+number of docs: 32
+posting position: 3401
+token: line
+number of docs: 80
+posting position: 3433
+token: user
+number of docs: 28
+posting position: 3513
+token: company
+number of docs: 73
+posting position: 3541
+token: pressure
+number of docs: 33
+posting position: 3614
+token: manufacturing
+number of docs: 19
+posting position: 3647
+token: system
+number of docs: 139
+posting position: 3666
+token: table
+number of docs: 16
+posting position: 3805
+token: track
+number of docs: 15
+posting position: 3821
+token: appropriate
+number of docs: 35
+posting position: 3836
+token: position
+number of docs: 97
+posting position: 3871
+token: difficult
+number of docs: 34
+posting position: 3968
+token: project
+number of docs: 45

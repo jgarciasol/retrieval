@@ -1,0 +1,200 @@
+number of docs: 1
+posting position: 202416
+token: spectacular
+number of docs: 1
+posting position: 202417
+token: underworld
+number of docs: 1
+posting position: 202418
+token: unsupported
+number of docs: 1
+posting position: 202419
+token: blackouts
+number of docs: 1
+posting position: 202420
+token: definitive
+number of docs: 1
+posting position: 202421
+token: emerges
+number of docs: 1
+posting position: 202422
+token: colombian
+number of docs: 1
+posting position: 202423
+token: cartels
+number of docs: 1
+posting position: 202424
+token: pitting
+number of docs: 1
+posting position: 202425
+token: outweigh
+number of docs: 1
+posting position: 202426
+token: criminalization
+number of docs: 1
+posting position: 202427
+token: celebrities
+number of docs: 1
+posting position: 202428
+token: stalking
+number of docs: 1
+posting position: 202429
+token: stalker
+number of docs: 1
+posting position: 202430
+token: prisons
+number of docs: 1
+posting position: 202431
+token: rehabilitative
+number of docs: 1
+posting position: 202432
+token: revolts
+number of docs: 1
+posting position: 202433
+token: uprisings
+number of docs: 1
+posting position: 202434
+token: synthesize
+number of docs: 1
+posting position: 202435
+token: optimally
+number of docs: 1
+posting position: 202436
+token: surveyors
+number of docs: 1
+posting position: 202437
+token: welsh
+number of docs: 1
+posting position: 202438
+token: booth
+number of docs: 1
+posting position: 202439
+token: midlands
+number of docs: 1
+posting position: 202440
+token: polytechnic
+number of docs: 1
+posting position: 202441
+token: databank
+number of docs: 1
+posting position: 202442
+token: guest
+number of docs: 1
+posting position: 202443
+token: metallic
+number of docs: 1
+posting position: 202444
+token: econometric
+number of docs: 1
+posting position: 202445
+token: generates
+number of docs: 1
+posting position: 202446
+token: distinctly
+number of docs: 1
+posting position: 202447
+token: topical
+number of docs: 1
+posting position: 202448
+token: ons
+number of docs: 1
+posting position: 202449
+token: disparities
+number of docs: 1
+posting position: 202450
+token: regeneration
+number of docs: 1
+posting position: 202451
+token: merseyside
+number of docs: 1
+posting position: 202452
+token: covent
+number of docs: 1
+posting position: 202453
+token: jets
+number of docs: 1
+posting position: 202454
+token: filters
+number of docs: 1
+posting position: 202455
+token: thick
+number of docs: 1
+posting position: 202456
+token: headliner
+number of docs: 1
+posting position: 202457
+token: fabrics
+number of docs: 1
+posting position: 202458
+token: drained
+number of docs: 1
+posting position: 202459
+token: pelt
+number of docs: 1
+posting position: 202460
+token: slope
+number of docs: 1
+posting position: 202461
+token: lengths
+number of docs: 1
+posting position: 202462
+token: specification
+number of docs: 1
+posting position: 202463
+token: corners
+number of docs: 1
+posting position: 202464
+token: repeatable
+number of docs: 1
+posting position: 202465
+token: geometric
+number of docs: 1
+posting position: 202466
+token: polylines
+number of docs: 1
+posting position: 202467
+token: arcs
+number of docs: 1
+posting position: 202468
+token: polyline
+number of docs: 1
+posting position: 202469
+token: teachpoints
+number of docs: 1
+posting position: 202470
+token: redefined
+number of docs: 1
+posting position: 202471
+token: velocities
+number of docs: 1
+posting position: 202472
+token: inserted
+number of docs: 1
+posting position: 202473
+token: calibrate
+number of docs: 1
+posting position: 202474
+token: orientations
+number of docs: 1
+posting position: 202475
+token: disconnected
+number of docs: 1
+posting position: 202476
+token: converts
+number of docs: 1
+posting position: 202477
+token: compiles
+number of docs: 1
+posting position: 202478
+token: binary
+number of docs: 1
+posting position: 202479
+token: tooling
+number of docs: 1
+posting position: 202480
+token: manually
+number of docs: 1
+posting position: 202481
+token: drastically
+number of docs: 1
+posting position: 202482
