@@ -76,7 +76,7 @@ def inverted_index(token_freq, doc_freq, output_dir):
     with open(dict_file, 'w') as d_file, open(post_file, 'w') as p_file:
         posting_pos = 1
         for token, docs in token_freq.items():
-            idf = math.log(num_docs / len(docs))
+            idf = math.log(num_docs / doc_freq[token])
             #writes token, num of docs containing token, and pos
             d_file.write(f'token: {token}\nnumber of docs: {len(docs)}\nposting position: {posting_pos}\n')
 
