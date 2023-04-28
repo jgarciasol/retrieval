@@ -14,6 +14,18 @@ def load_inverted_index():
         postings = post_file.read().splitlines()
     return dictionary, postings
 
+def printing_top_10(found_query, query):
+    #sorting to display top 10 terms
+    sorted_found = sorted(found_query.items(), key=lambda x: x[1], reverse=True)
+            
+    print(f'{query} was found in {len(sorted_found)} documents')
+    if len(sorted_found) >= 10:
+        for x in range(10):
+            print(sorted_found[x])
+    else:
+        for x in range(len(sorted_found)):
+            print(sorted_found[x])
+
 def cosine_similarity(dictionary, postings, query):
 
     '''
@@ -41,14 +53,12 @@ def cosine_similarity(dictionary, postings, query):
                 (doc, score) = word.split(',')
                 
                 found[doc] = score
+
+            printing_top_10(found, query)
         else:
             print('Query not in index')
 
-    #sorting to display top 10 terms
-    sorted_found = sorted(found.items(), key=lambda x: x[1], reverse=True)
-    print(f'{query} was found in {len(sorted_found)} documents\nDisplaying Top 10:')
-    for x in range(10):
-        print(sorted_found[x])
+   
 
 
 if __name__ == "__main__":
