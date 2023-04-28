@@ -17,7 +17,7 @@ def load_inverted_index():
 def printing_top_10(found_query, query):
     #sorting to display top 10 terms
     sorted_found = sorted(found_query.items(), key=lambda x: x[1], reverse=True)
-            
+
     print(f'{query} was found in {len(sorted_found)} documents')
     if len(sorted_found) >= 10:
         for x in range(10):
@@ -57,9 +57,6 @@ def cosine_similarity(dictionary, postings, query):
             printing_top_10(found, query)
         else:
             print('Query not in index')
-
-   
-
 
 if __name__ == "__main__":
     dictionary, postings = load_inverted_index()
