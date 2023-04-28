@@ -7,7 +7,7 @@ from collections import defaultdict
 
 def load_inverted_index():
     '''
-    dictionary.txt and postings.txt are loaded in the memory 
+    dictionary.txt and postings.txt are loaded in the memory as lists
     '''
     with open('dictionary.txt', 'r', encoding='UTF-8') as dict_file, open('postings.txt', 'r') as post_file:
         dictionary = dict_file.read().splitlines()
@@ -15,6 +15,10 @@ def load_inverted_index():
     return dictionary, postings
 
 def cosine_similarity(dictionary, postings, query):
+
+    '''
+    performing term at a time 
+    '''
     found = {}
     # print(dictionary)
     # print(postings)
@@ -23,7 +27,7 @@ def cosine_similarity(dictionary, postings, query):
     for token in query:
         #if the token from the query is in the dictionary file
         if token in dictionary:
-            position_of_token = dictionary.index(token)
+            position_of_token = dictionary.index(token) #finding the location of the token in dictionary 
             number_postings = int(dictionary[position_of_token + 1]) #one line below from token is num of postings
             #print(number_postings)
             start_pos_in_postings = int(dictionary[position_of_token + 2]) #2 lines below token is start pos in postings.txt
@@ -42,7 +46,7 @@ def cosine_similarity(dictionary, postings, query):
 
     #sorting to display top 10 terms
     sorted_found = sorted(found.items(), key=lambda x: x[1], reverse=True)
-    print(f'{query} was found in {len(sorted_found)} documents')
+    print(f'{query} was found in {len(sorted_found)} documents\nDisplaying Top 10:')
     for x in range(10):
         print(sorted_found[x])
 
@@ -62,4 +66,4 @@ if __name__ == "__main__":
     start = time.time()
     cosine_similarity(dictionary, postings, query)
     end = time.time()
-    print(f'total time for query: {end-start}')
+    print(f'Total time for query: {end-start}')
