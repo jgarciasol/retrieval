@@ -78,7 +78,7 @@ def inverted_index(token_freq, doc_freq, output_dir):
         for token, docs in token_freq.items():
             idf = math.log(num_docs / doc_freq[token])
             #writes token, num of docs containing token, and pos
-            d_file.write(f'token: {token}\nnumber of docs: {len(docs)}\nposting position: {posting_pos}\n')
+            d_file.write(f'{token}\n{len(docs)}\n{posting_pos}\n')
 
             for file, weight in docs.items():
                 tf = weight
@@ -91,7 +91,7 @@ def inverted_index(token_freq, doc_freq, output_dir):
                 posting_pos += 1
         
         for post in postings:
-            p_file.write(f'{post[0]}, {post[1]}\n')
+            p_file.write(f'{post[0]},{post[1]}\n')
 
 def measure_time(input_dir, output_dir, stop_words_set, num_docs_list):
     files = get_filenames(input_dir)
