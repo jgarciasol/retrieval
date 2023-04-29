@@ -28,24 +28,14 @@ def printing_top_10(found_query, query):
             count += 1
             if count == 10:
                 break
-    #sorting to display top 10 terms
-    # sorted_found = sorted(found_query.items(), key=lambda x: x[1], reverse=True)
 
-    # print(f'{query} was found in {len(sorted_found)} documents')
-    # if len(sorted_found) >= 10:
-    #     for x in range(10):
-    #         print(sorted_found[x])
-    # else:
-    #     for x in range(len(sorted_found)):
-    #         print(sorted_found[x])
-
-def cosine_similarity(dictionary, postings, query):
+def sum_document_similarity(dictionary, postings, query):
 
     '''
     performing term at a time 
     '''
     found = {} #document scores
-    weights = {} #normalized query weights
+   # tf_idf = {}
     #going term at a time
     for token in query:
         #if the token from the query is in the dictionary file
@@ -55,17 +45,22 @@ def cosine_similarity(dictionary, postings, query):
             #print(number_postings)
             start_pos_in_postings = int(dictionary[position_of_token + 2]) #2 lines below token is start pos in postings.txt
             #print(type(start_pos_in_postings))
-
             #find the documentid in posting.txt
             documentid = postings[start_pos_in_postings: start_pos_in_postings + number_postings]
-
+            #print(documentid)
             for word in documentid:
+
                 #here stripping off the comma from postings.txt.
                 (doc, score) = word.split(',')
+                #print(f"Processing doc: {doc}, score: {score}")
                 if doc in found:
+                  #  print(f'Doc {doc} already in dictionary, updating score')
                     found[doc] += float(score)
                 else:
+                  #  print(f'Adding doc {doc} to dictionary')
                     found[doc] = float(score)
+                    #print(found)
+                #print(f'current score {score}')
         else:
             print('Query not in index')
     printing_top_10(found, query)
@@ -84,6 +79,6 @@ if __name__ == "__main__":
         query.append(word)
     start = time.time()
     #query = ' '.join(query)
-    cosine_similarity(dictionary, postings, query)
+    sum_document_similarity(dictionary, postings, query)
     end = time.time()
     print(f'Total time for query: {end-start}')
