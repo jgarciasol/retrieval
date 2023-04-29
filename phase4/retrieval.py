@@ -17,24 +17,35 @@ def load_inverted_index():
 def printing_top_10(found_query, query):
     #sorting to display top 10 terms
     sorted_found = sorted(found_query.items(), key=lambda x: x[1], reverse=True)
+    #query = ' '.join(query)
+    
+    print(f'{query} was found in {len(found_query)} documents')
+    #print(sorted_found)
+    count = 0 
+    for doc, score in sorted_found:
+        #if score > 0:
+            print(f'{doc}, {score}')
+            count += 1
+            if count == 10:
+                break
+    #sorting to display top 10 terms
+    # sorted_found = sorted(found_query.items(), key=lambda x: x[1], reverse=True)
 
-    print(f'{query} was found in {len(sorted_found)} documents')
-    if len(sorted_found) >= 10:
-        for x in range(10):
-            print(sorted_found[x])
-    else:
-        for x in range(len(sorted_found)):
-            print(sorted_found[x])
+    # print(f'{query} was found in {len(sorted_found)} documents')
+    # if len(sorted_found) >= 10:
+    #     for x in range(10):
+    #         print(sorted_found[x])
+    # else:
+    #     for x in range(len(sorted_found)):
+    #         print(sorted_found[x])
 
 def cosine_similarity(dictionary, postings, query):
 
     '''
     performing term at a time 
     '''
-    found = {}
-    # print(dictionary)
-    # print(postings)
-
+    found = {} #document scores
+    weights = {} #normalized query weights
     #going term at a time
     for token in query:
         #if the token from the query is in the dictionary file
@@ -51,12 +62,13 @@ def cosine_similarity(dictionary, postings, query):
             for word in documentid:
                 #here stripping off the comma from postings.txt.
                 (doc, score) = word.split(',')
-                
-                found[doc] = score
-
-            printing_top_10(found, query)
+                if doc in found:
+                    found[doc] += float(score)
+                else:
+                    found[doc] = float(score)
         else:
             print('Query not in index')
+    printing_top_10(found, query)
 
 if __name__ == "__main__":
     dictionary, postings = load_inverted_index()
@@ -71,6 +83,7 @@ if __name__ == "__main__":
         word = sys.argv[i].lower()
         query.append(word)
     start = time.time()
+    #query = ' '.join(query)
     cosine_similarity(dictionary, postings, query)
     end = time.time()
     print(f'Total time for query: {end-start}')
