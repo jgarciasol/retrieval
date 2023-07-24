@@ -1,0 +1,100 @@
+Line 1: (153.html, 494.html) Distance: 0.007388190380137459
+Line 2: (035.html, Cluster 0) Distance: 0.00831807483726267
+Line 3: (227.html, Cluster 1) Distance: 0.013132297861483922
+Line 4: (148.html, Cluster 2) Distance: 0.017310789748605407
+Line 5: (092.html, Cluster 3) Distance: 0.019028271778731762
+Line 6: (210.html, Cluster 4) Distance: 0.021919073594870518
+Line 7: (206.html, Cluster 5) Distance: 0.029414551967675243
+Line 8: (017.html, Cluster 6) Distance: 0.0368659506611549
+Line 9: (100.html, Cluster 7) Distance: 0.04069300163265086
+Line 10: (288.html, 293.html) Distance: 0.041851497747816574
+Line 11: (070.html, Cluster 8) Distance: 0.045105477590324246
+Line 12: (218.html, Cluster 10) Distance: 0.04617372682061079
+Line 13: (362.html, 352.html) Distance: 0.04646764036203828
+Line 14: (345.html, 338.html) Distance: 0.04684096289335029
+Line 15: (329.html, 330.html) Distance: 0.04737321019837031
+Line 16: (226.html, Cluster 11) Distance: 0.04844611352591782
+Line 17: (367.html, Cluster 12) Distance: 0.04887545027771076
+Line 18: (026.html, Cluster 9) Distance: 0.04932954868306539
+Line 19: (378.html, Cluster 15) Distance: 0.04984771889076133
+Line 20: (355.html, Cluster 13) Distance: 0.05034106982858773
+Line 21: (181.html, Cluster 18) Distance: 0.05069520376667488
+Line 22: (365.html, 375.html) Distance: 0.05203674219179385
+Line 23: (384.html, 174.html) Distance: 0.052582015607412456
+Line 24: (Cluster 17, Cluster 20) Distance: 0.052582015607412456
+Line 25: (358.html, Cluster 19) Distance: 0.05276491580757992
+Line 26: (102.html, Cluster 23) Distance: 0.05653847744311069
+Line 27: (342.html, Cluster 16) Distance: 0.05720402718332901
+Line 28: (353.html, Cluster 24) Distance: 0.05810160952113412
+Line 29: (276.html, 137.html) Distance: 0.059340359265740036
+Line 30: (495.html, 491.html) Distance: 0.059463156999895024
+Line 31: (187.html, Cluster 25) Distance: 0.06010181527208157
+Line 32: (105.html, 042.html) Distance: 0.06076681151310429
+Line 33: (359.html, Cluster 27) Distance: 0.06087744733083477
+Line 34: (343.html, 354.html) Distance: 0.06104920196109932
+Line 35: (172.html, 202.html) Distance: 0.061582355076455896
+Line 36: (368.html, 344.html) Distance: 0.06165481671367613
+Line 37: (279.html, 236.html) Distance: 0.06389018002177828
+Line 38: (Cluster 28, Cluster 31) Distance: 0.06389018002177828
+Line 39: (004.html, 068.html) Distance: 0.06396385526219002
+Line 40: (349.html, Cluster 21) Distance: 0.06399084596518799
+Line 41: (158.html, Cluster 30) Distance: 0.06428987970688906
+Line 42: (264.html, 275.html) Distance: 0.06439938321216687
+Line 43: (Cluster 26, Cluster 32) Distance: 0.06439938321216687
+Line 44: (135.html, Cluster 40) Distance: 0.06654406816798114
+Line 45: (Cluster 29, Cluster 37) Distance: 0.06654406816798114
+Line 46: (184.html, 197.html) Distance: 0.06898302359852214
+Line 47: (372.html, 373.html) Distance: 0.06914031481486126
+Line 48: (088.html, 103.html) Distance: 0.06915775959707751
+Line 49: (Cluster 35, Cluster 39) Distance: 0.06915775959707751
+Line 50: (325.html, Cluster 14) Distance: 0.0692665888380891
+Line 51: (265.html, Cluster 43) Distance: 0.06983654377405395
+Line 52: (074.html, Cluster 41) Distance: 0.0706468055943006
+Line 53: (235.html, 332.html) Distance: 0.071055205812263
+Line 54: (Cluster 44, Cluster 50) Distance: 0.071055205812263
+Line 55: (460.html, 470.html) Distance: 0.07330143512814723
+Line 56: (Cluster 22, Cluster 53) Distance: 0.07330143512814723
+Line 57: (119.html, 099.html) Distance: 0.07407237533036239
+Line 58: (216.html, Cluster 55) Distance: 0.0755538442712359
+Line 59: (364.html, Cluster 46) Distance: 0.0756468979368128
+Line 60: (066.html, 098.html) Distance: 0.07636800675532629
+Line 61: (369.html, Cluster 48) Distance: 0.07714966176142118
+Line 62: (361.html, Cluster 33) Distance: 0.07718398177745978
+Line 63: (306.html, 062.html) Distance: 0.07718692543070683
+Line 64: (314.html, 297.html) Distance: 0.07737409492028817
+Line 65: (445.html, 447.html) Distance: 0.07844146748114447
+Line 66: (292.html, 295.html) Distance: 0.07853573969484026
+Line 67: (339.html, 374.html) Distance: 0.07872929840465148
+Line 68: (Cluster 57, Cluster 62) Distance: 0.07872929840465148
+Line 69: (271.html, Cluster 51) Distance: 0.0788673967687703
+Line 70: (007.html, 139.html) Distance: 0.07964215379943002
+Line 71: (Cluster 36, Cluster 52) Distance: 0.07964215379943002
+Line 72: (116.html, 109.html) Distance: 0.0804948769576606
+Line 73: (108.html, 317.html) Distance: 0.08058994407984985
+Line 74: (298.html, 310.html) Distance: 0.08060656130142904
+Line 75: (346.html, 357.html) Distance: 0.08168616859553861
+Line 76: (084.html, 167.html) Distance: 0.08194684726983623
+Line 77: (296.html, Cluster 65) Distance: 0.0821018986757125
+Line 78: (503.html, Cluster 38) Distance: 0.0824650566211002
+Line 79: (018.html, 263.html) Distance: 0.0827148520334475
+Line 80: (Cluster 56, Cluster 67) Distance: 0.0827148520334475
+Line 81: (Cluster 42, Cluster 61) Distance: 0.0827148520334475
+Line 82: (229.html, 010.html) Distance: 0.08384610246556788
+Line 83: (347.html, Cluster 58) Distance: 0.08455661049535348
+Line 84: (277.html, 278.html) Distance: 0.08514632968374672
+Line 85: (Cluster 75, Cluster 79) Distance: 0.08514632968374672
+Line 86: (251.html, Cluster 76) Distance: 0.08644617493061675
+Line 87: (207.html, Cluster 68) Distance: 0.08653208570717615
+Line 88: (472.html, Cluster 54) Distance: 0.08766336846516873
+Line 89: (Cluster 84, Cluster 86) Distance: 0.08766336846516873
+Line 90: (363.html, Cluster 66) Distance: 0.08857555846946635
+Line 91: (254.html, 257.html) Distance: 0.08952416292507161
+Line 92: (220.html, 305.html) Distance: 0.09017385103397314
+Line 93: (377.html, Cluster 82) Distance: 0.09064238752769439
+Line 94: (366.html, 371.html) Distance: 0.09157785954611233
+Line 95: (Cluster 81, Cluster 88) Distance: 0.09157785954611233
+Line 96: (Cluster 63, Cluster 85) Distance: 0.09157785954611233
+Line 97: (Cluster 60, Cluster 80) Distance: 0.09157785954611233
+Line 98: (260.html, 262.html) Distance: 0.09402922917214389
+Line 99: (350.html, Cluster 74) Distance: 0.09409237356018198
+Line 100: (300.html, Cluster 73) Distance: 0.09546511962141602
